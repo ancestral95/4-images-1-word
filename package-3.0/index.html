@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title> 4 Images 1 Word </title>
+	</head>
+	<body>
+		<img src="home.jpeg" height="100%" width="100%">
+		<script type="text/javascript">
+		switch (localStorage.livello) {
+			case "1": window.setTimeout("location.href = './lv1.html'", 3000);
+				break;
+			case "2": window.setTimeout("location.href = './lv2.html'", 3000);
+				break;
+			case "3": window.setTimeout("location.href = './lv3.html'", 3000);
+				break;
+			case "4": window.setTimeout("location.href = './lv4.html'", 3000);
+				break;
+			case "5": window.setTimeout("location.href = './lv5.html'", 3000);
+				break;
+			default: window.setTimeout("location.href = './lv1.html'", 3000);
+				break;
+		}
+		</script>
+	</body>
+</html>
