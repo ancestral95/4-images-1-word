@@ -1,0 +1,44 @@
+
+h1 {
+	color: #1150ff;
+	text-align: center;
+}
+
+.intera {
+	width: 75%;
+	height: 75%;
+}
+
+.tasto {
+	width: 100%;
+	height: 100%;
+	font-size: 20px;
+	color: #FF0000;
+}
+
+form {
+	width: 100%;
+	height: 100%;
+}
+
+.larga {
+	width: 100%;
+}
+
+td {
+	text-align: center;
+}
+
+p {
+	word-spacing: 8px;
+}
+
+img {
+	width: 55%;
+	height: 65%;
+}
+
+#bottone {
+	width: 10%;
+	height: 5%;
+}

@@ -1,0 +1,178 @@
+<html>
+	<head>
+		<title> 4 Images 1 Word </title>
+		<link rel="stylesheet" href="style.css"/>
+		<script type="text/javascript">
+			function execute() {
+				var word = document.module.word;
+				if(localStorage.livello=="1") {
+					if (word.value.toLowerCase()=="hello") {
+						alert("Perfect!");
+						word.style.color="green";
+						alert("Redirecting to next livel");
+						localStorage.setItem('livello', '2');
+						location.href = "./gioco.html";
+						
+					}
+					else {
+						alert("Wrong word!");
+						word.style.color="red";
+					}
+				}
+				if(localStorage.livello=="2") {
+					if (word.value.toLowerCase()=="bat") {
+						alert("Perfect!");
+						word.style.color="green";
+						alert("Redirecting to next livel");
+						localStorage.setItem('livello', '3');
+						location.href = "./gioco.html";
+					}
+					else {
+						alert("Wrong word!");
+						word.style.color="red";
+					}
+				}
+				if(localStorage.livello=="3") {
+					if (word.value.toLowerCase()=="full") {
+						alert("Perfect!");
+						word.style.color="green";
+						alert("Redirecting to next livel");
+						localStorage.setItem('livello', '4');
+						location.href = "./gioco.html";
+					}
+					else {
+						alert("Wrong word!");
+						word.style.color="red";
+					}
+				}
+				if(localStorage.livello=="4") {
+					if (word.value.toLowerCase()=="train") {
+						alert("Perfect!");
+						word.style.color="green";
+						alert("Redirecting to next livel");
+						localStorage.setItem('livello', '5');
+						location.href = "./gioco.html";
+					}
+					else {
+						alert("Wrong word!");
+						word.style.color="red";
+					}
+				}
+				if(localStorage.livello=="5") {
+					if (word.value.toLowerCase()=="calendar") {
+						alert("Perfect!");
+						word.style.color="green";
+						alert("Redirecting to next livel");
+						localStorage.setItem('livello', '1');
+						location.href = "./finish.html";
+					}
+					else {
+						alert("Wrong word!");
+						word.style.color="red";
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<form name="module" autocomplete="off">
+			<br/>
+			<table width="100%" height="60%" border="1">
+				<tr>
+					<td>
+						<script type="text/javascript">
+							switch (localStorage.livello) {
+								case "1": document.write("<img src='./images/1.jpg'>");
+									break;
+								case "2": document.write("<img src='./images/5.jpg'>");
+									break;
+								case "3": document.write("<img src='./images/9.jpg'>");
+									break;
+								case "4": document.write("<img src='./images/13.jpg'>");
+									break;
+								case "5": document.write("<img src='./images/17.jpg'>");
+									break;
+								default: document.write("<img src='./images/1.jpg'>");
+									localStorage.setItem('livello', '1');
+							}
+						</script>
+					</td>
+					<td>
+						<script type="text/javascript">
+							switch (localStorage.livello) {
+								case "1": document.write("<img src='./images/2.jpg'>");
+									break;
+								case "2": document.write("<img src='./images/6.jpg'>");
+									break;
+								case "3": document.write("<img src='./images/10.jpg'>");
+									break;
+								case "4": document.write("<img src='./images/14.jpg'>");
+									break;
+								case "5": document.write("<img src='./images/18.jpg'>");
+									break;
+								default: document.write("<img src='./images/2.jpg'>");
+							}
+						</script>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<script type="text/javascript">
+							switch (localStorage.livello) {
+								case "1": document.write("<img src='./images/3.jpg'>");
+									break;
+								case "2": document.write("<img src='./images/7.jpg'>");
+									break;
+								case "3": document.write("<img src='./images/11.jpg'>");
+									break;
+								case "4": document.write("<img src='./images/14.jpg'>");
+									break;
+								case "5": document.write("<img src='./images/19.jpg'>");
+									break;
+								default: document.write("<img src='./images/3.jpg'>");
+							}
+						</script>
+					</td>
+					<td>
+						<script type="text/javascript">
+							switch (localStorage.livello) {
+								case "1": document.write("<img src='./images/4.jpg'>");
+									break;
+								case "2": document.write("<img src='./images/8.jpg'>");
+									break;
+								case "3": document.write("<img src='./images/12.jpg'>");
+									break;
+								case "4": document.write("<img src='./images/15.jpg'>");
+									break;
+								case "5": document.write("<img src='./images/20.jpg'>");
+									break;
+								default: document.write("<img src='./images/4.jpg'>");
+							}
+						</script>
+					</td>
+				</tr>
+			</table>
+			<br/><br/>
+			<hr/>
+			<script type="text/javascript">
+				switch (localStorage.livello) {
+					case "1": document.write("TIP: 5 LETTERS");
+						break;
+					case "2": document.write("TIP: 3 LETTERS");
+						break;
+					case "3": document.write("TIP: 4 LETTERS");
+						break;
+					case "4": document.write("TIP: 5 LETTERS");
+						break;
+					case "5": document.write("TIP: 8 LETTERS");
+						break;
+					default: document.write("TIP: 5 LETTERS");
+				}
+			</script>
+			<hr/>
+			<br/>
+			<input type="text" name="word">
+			<input type="button" name="go" value="Check!" OnClick="execute();" id="bottone">
+		</form>
+	</body>
+</html>
