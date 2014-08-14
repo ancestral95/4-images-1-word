@@ -1,0 +1,14 @@
+{
+   "name":"4 Images 1 Word",
+   "description":"Try to find the word behind 4 images",
+   "launch_path":"/index.html",
+   "version":"2.3",
+   "icons":{
+      "128":"/icona128.ico"
+   },
+   "developer":{
+      "name":"Informacomputer",
+      "url":"http://informacomputer.it"
+   },
+   "default_locale":"it"
+}

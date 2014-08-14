@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<title> 4 Images 1 Word </title>
+		<link rel="stylesheet" media="screen and (max-device-height: 799px) and (max-device-width: 799px)" href="style.css"/>
+		<script type="text/javascript">
+			function execute() {
+				var word = document.module.word;
+				if (word.value.toLowerCase()=="hello") {
+					alert("Perfect!");
+					word.style.color="green";
+					alert("Redirecting to next livel");
+					window.setTimeout("doRedirect()", 0);
+				}
+				else {
+					alert("Wrong word!");
+					word.style.color="red";
+				}
+			}
+			function doRedirect() {
+				location.href = "./lv2.html";
+			}
+		</script>
+	</head>
+	<body>
+		<form name="module" autocomplete="off">
+			<br/>
+			<table width="100%" height="60%" border="1">
+				<tr>
+					<td> <img src="./images/1.jpg"> </td>
+					<td> <img src="./images/2.jpg"> </td>
+				</tr>
+				<tr>
+					<td> <img src="./images/3.jpg"> </td>
+					<td> <img src="./images/4.jpg"> </td>
+				</tr>
+			</table>
+			<br/><br/>
+			<hr/>
+			<p>H A G P L E R B L Q X A O</p>
+			<hr/>
+			<br/>
+			<input type="text" maxlength="5" name="word">
+			<input type="button" name="go" value="Check!" OnClick="execute();">
+		</form>
+	</body>
+</html>
